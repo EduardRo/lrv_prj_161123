@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('cars', function (Blueprint $table) {
             $table->id();
+            $table->foreign('client_id', 20);
             $table->string('brand');
             $table->string('model');
             $table->enum('fuel', ['petrol', 'diesel', 'electric', 'hybrid']);
