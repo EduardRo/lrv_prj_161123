@@ -21,17 +21,15 @@ class CarFactory extends Factory
     {
         return [
             'model' => fake()->randomElement($this->carModels),
-            'price'=>fake()->numberBetween(10000,120000),
+            'price' => fake()->numberBetween(10000, 120000),
 
 
 
         ];
     }
-
-    public function 
 }
 /*
  $table->string('brand');
             $table->string('model');
             $table->enum('fuel', ['petrol', 'diesel', 'electric', 'hybrid']);
-            $table->decimal('price', 6, 2);
+            $table->decimal('price', 6, 2);*/

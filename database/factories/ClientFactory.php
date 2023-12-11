@@ -23,7 +23,7 @@ class ClientFactory extends Factory
             'surname' => fake()->lastName(),
             'address' => fake()->address(),
             'city' => fake()->city(),
-            'email' => fake()->email()
+            'email' => fake()->unique()->email()
 
         ];
     }
