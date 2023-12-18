@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Test;
+
 
 class TestController extends Controller
 {
@@ -19,11 +21,11 @@ class TestController extends Controller
 
     function getTestById($id)
     {
-        // $db = new DatabaseConnection();
+        $testModel = new Test();
 
         $query = "SELECT * FROM test WHERE id = :id";
 
-        $stmt = $db->prepare($query);
+        $stmt = $testModel->prepare($query);
         $stmt->bindParam(':id', $id);
 
         $stmt->execute();
